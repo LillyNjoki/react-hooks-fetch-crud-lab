@@ -16,7 +16,7 @@ function App() {
   }
 
   function updateQuestion(id, update) {
-    fetch(`http://localhost:4000/questions/${id}`,{
+    fetch(`http://localhost:3000/questions/${id}`,{
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"
@@ -36,7 +36,7 @@ function App() {
   }
 
   useEffect(() => {
-    fetch("http://localhost:4000/questions")
+    fetch("http://localhost:3000/questions")
     .then(res => res.json())
     .then(data => setQuestions(data))
   },[])
